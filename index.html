@@ -1,324 +1,341 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Distribuidora Wilsons</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/images/iconos/W.png" type="image/x-icon">
+    <link rel="icon" href="images/iconos/W.png" type="image/png">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </head>
   <body>
-    <div class="main">
-      <header class="header">
+    <header class="header">
+      <div class="container d-flex justify-content-between align-items-center py-3">
         <div class="logo">
-          <img src="images/NEW-BRAND-ORIGIN-5.png" alt="Logo de la marca">
+          <img src="images/NEW-BRAND-ORIGIN-5.png" alt="Logo de Distribuidora Wilsons" height="50">
         </div>
         <nav>
-           <ul class="nav-links">
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">¿QUIENES SOMOS?</a></li>
-                <li><a href="#">BENEFICIOS</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-           </ul>
+          <ul class="nav d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nosotros">¿QUIENES SOMOS?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#beneficios">BENEFICIOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#productos">PRODUCTOS</a></li>
+          </ul>
         </nav>
-        <a class="btn" href="https://wa.link/oe81j8"><button>CONTACTO</button></a>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-success me-2" href="https://wa.link/oe81j8" role="button">CONTÁCTANOS</a>
+          <button class="btn btn-primary d-md-none menu-button" onclick="openNav()" aria-label="Abrir menú">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
 
-       <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-
-       <div id="mobile-menu" class="overlay">
-           <a onclick="closeNav()" href="" class="close">&times;</a>
-           <div class="overlay-content">
-               <a href="/">INICIO</a>
-               <a href="#nosotros">¿QUIENES SOMOS?</a>
-               <a href="#">BENEFICIOS</a>
-               <a href="#">PRODUCTOS</a>
-           </div>
-       </div>
-
-
+      <!-- Menú Móvil -->
+      <div id="mobile-menu" class="overlay d-md-none">
+        <button onclick="closeNav()" class="close-button" aria-label="Cerrar menú">&times;</button>
+        <div class="overlay-content">
+          <a href="#" onclick="closeNav()">INICIO</a>
+          <a href="#nosotros" onclick="closeNav()">¿QUIENES SOMOS?</a>
+          <a href="#beneficios" onclick="closeNav()">BENEFICIOS</a>
+          <a href="#productos" onclick="closeNav()">PRODUCTOS</a>
+        </div>
+      </div>
     </header>
 
-
-<!---->
-    <div class="first-background main-portada">
-        <div class="container" id="carousel">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators carousel-indicators-round">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row align-items-center">
-                      <div class="col-md-4 carousel-middle-img">
-                        <br><br>
-                        <h1 class="Title-principal">Más Salud
-                           con Agua
-                            de mesa
-                             Tesoro</h1>
-                         <p class="slogan">El verdadero tesoro de la naturaleza a tu alcance</p>
-                         <a href="https://wa.link/wst43e"><button type="button" class="btn btn-primary btn-wasa-carrusel"><img src="images/wasa-1.png" alt="">Solicitar por whatsapp →</button></a>
-
-
-                      </div>
-                      <div class="col-md-1"></div>
-                      <div class="col-md-7 carousel-img">
-                        <img src="images/banner-products/BIDON-BLUE-DOBLE.png" class="d-block w-100" alt="...">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
+    <main>
+      <!-- Carrusel Principal -->
+      <section class="carousel-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators carousel-indicators-round">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <!-- 1 Slide -->
+            <div class="carousel-item active">
+              <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-4 carousel-middle-img">
-                      <br><br><br>
-                      <h1 class="Title-principal">Bidón Azul Blue</h1>
-                      <p class="slogan">El verdadero tesoro de la naturaleza a tu alcance </p>
-
-                      <button type="button" class="btn btn-primary btn-wasa-carrusel"><img src="images/wasa-1.png" alt="">Solicitar por whatsapp →</button>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-7 carousel-img">
-                      <img src="images/banner-products/BIDON-BLUE.png" class="d-block w-100" alt="...">
-                    </div>
+                  <div class="col-md-5 custom-content-text">
+                    <h1 class="display-4 text-dark fs-1">AGUA TESORO <br>20 LITROS</h1>
+                    <p class="lead text-dark">Agua Ozonizada con proceso de osmoisi inversa y rayos UV</p>
+                    <a href="https://wa.link/1e5yi5" class="btn btn-primary">
+                      <img src="images/wasa-1.png" alt="Icono WhatsApp" class="me-2"> Solicitar por WhatsApp →
+                    </a>
+                  </div>
+                  <div class="col-md-7 custom-content">
+                    <img src="images/banner-products/BA.png" class="img-fluid" alt="Bidón Azul">
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
+            </div>
+            <!-- 2 Slide -->
+            <div class="carousel-item">
+              <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-4 carousel-middle-img">
-                      <br><br>
-                      <h1 class="Title-principal">Bidón Rosado Pink</h1>
-                      <p class="slogan">El verdadero tesoro de la naturaleza a tu alcance</p>
-                      <button type="button" class="btn btn-primary btn-wasa-carrusel"><img src="images/wasa-1.png" alt="">Solicitar por whatsapp →</button>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-7 carousel-img">
-                      <img src="images/banner-products/BIDON-PINK.png" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-              </div>
-
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <section id="nosotros">
-    <div class="first-background ">
-        <div class="container container-nosotros" id="carousel">
-                  <div class="row align-items-center">
-                      <div class="col-md-4 carousel-middle-img">
-                        <h1 class="Title-nosotros">NOSOTROS</h1>
-                        <p class="content-paragraft"><strong> DISTRIBUIDORA WILSONS: Tu fuente de agua pura y saludable. Ofrecemos bidones de 20 litros de agua purificada con tecnología de ósmosis inversa, ozono y rayos UV. Garantizamos la máxima calidad y frescura en cada sorbo. <br> <br> Nuestra misión es proporcionar una hidratación excepcional para tu hogar u oficina. Comprometidos con la sostenibilidad, utilizamos envases eco-amigables. En Dwilsons, creemos en la excelencia en cada gota. Mejora tu bienestar con nuestra agua de calidad superior. Confía en nosotros como tu fuente confiable de hidratación.</strong></p>
-                        <!-- <p class="slogan">El verdadero tesoro de la naturaleza a tu alcance</p> -->
-                      </div>
-                      <div class="col-md-1"></div>
-                      <div class="col-md-7 carousel-img">
-                        <img src="images/banner-products/foto-Dwilson2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                  </div>
-            </div>
-          </div>
-    </div>
-  </section>
-
-<hr class="separador">
-<div class="container-phase">
-  <div>
-    <img src="images/NEW-BRAND-ORIGIN-2.png" alt="">
-  </div>
-  <div>
-    <p><strong><i>En DISTRIBUIDORA WILSONS, nos dedicamos a proporcionar agua purificada de la más alta calidad en bidones de 20 litros. Nuestra tecnología de ósmosis inversa, ozono y rayos UV garantiza la frescura y pureza en cada sorbo.</i></strong> </p>
-  </div>
-</div>
-
-<hr class="separador">
-<div class="first-background main-beneficios">
-  <div class="container container-beneficios" id="carousel">
-            <div class="row align-items-center ">
-              <h1 class="Title-beneficios">BENEFICIOS</h1>
-              <div class="col-md-1"></div>
-                <div class="col-md-7 carousel-img">
-                  <img src="images/banner-products/mujer4.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="col-md-4 carousel-middle-img ">
-
-                  <ul>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Agua pura y segura.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Mejor sabor y olor.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Protección bacteriológica.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Hidratación efectiva.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Salud gastrointestinal.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Sostenible.</li>
-                    <li class="content-list-beneficios"><img src="images/iconos/icons8-agua-48.png" alt="">Conveniencia y ahorro.</li>
-                  </ul>
-                </div>
-
-            </div>
-      </div>
-    </div>
-</div>
-
-
-
-          <!-- Bidon azul -->
-    <div class="container main-productos" id="product">
-        <div class="cat-name d-flex justify-content-between container-productos">
-          <h1 class="fw-bolder text-bidonAzul Title-productos">PRODUCTOS</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col card-bidonpink">
-            <div class="card h-100">
-              <div class="product-card">
-                <img src="images/bidon-azul/bidon-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title precio">Bidón Azul + Agua de 20L</h5>
-                  <h5 class="precio">S/30</h5>
-                </div>
-                <div class="card-footer">
-                  <div class="btn-container-wasa">
-                    <a href="https://wa.link/0j09kh">
-                      <button class="btn-wasap">
-                      <img src="images/wasa-1.png" alt=""> Solicitar →</button>
+                  <div class="col-md-5 custom-content-text">
+                    <h1 class="display-4 text-dark fs-1">Bidón Rosado Pink</h1>
+                    <p class="lead text-dark">El verdadero tesoro de la naturaleza a tu alcance.</p>
+                    <a href="https://wa.link/vyicsy" class="btn btn-primary">
+                      <img src="images/wasa-1.png" alt="Icono WhatsApp" class="me-2"> Solicitar por WhatsApp →
                     </a>
                   </div>
+                  <div class="col-md-7 custom-content">
+                    <img src="images/banner-products/BP.png" class="img-fluid" alt="Bidón Rosado Pink">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col card-bidonpink">
-            <div class="card h-100">
-              <div class="product-card">
-                <img src="images/bidon-azul/bidon-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title precio">Solo Agua de 20L</h5>
-                  <h5 class="precio">S/14</h5>
-                </div>
-                <div class="card-footer">
-                  <div class="btn-container-wasa">
-                    <a href="https://wa.link/1e5yi5">
-                      <button class="btn-wasap">
-                      <img src="images/wasa-1.png" alt=""> Solicitar →</button>
+            <!-- 3 Slide -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-5 custom-content-text">
+                    <h1 class="display-4 text-dark fs-1">Hidratación saludable</h1>
+                    <p class="lead text-dark">El verdadero Tesoro de la naturaleza a tu alcance.</p>
+                    <a href="https://wa.link/vyicsy" class="btn btn-primary">
+                      <img src="images/wasa-1.png" alt="Icono WhatsApp" class="me-2"> Solicitar por WhatsApp →
                     </a>
+                  </div>
+                  <div class="col-md-7 custom-content-2">
+                    <img src="images/banner-products/CH.1.jpg" class="img-fluid" alt="Bidón Rosado Pink">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col card-bidonpink">
-            <div class="card h-90">
-              <div class="product-card">
-                  <img src="images/bidon-azul/bidon-2.png" class="card-img-top" alt="...">
+          <!-- Controles del Carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Sección Nosotros -->
+      <section id="nosotros" class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h2 class="mb-4">Acerca de Nosotros</h2>
+              <p class="lead">
+                <strong>DISTRIBUIDORA WILSONS:</strong> Tu fuente de agua pura y saludable. Ofrecemos bidones de 20 litros de agua purificada con tecnología de ósmosis inversa, ozono y rayos UV. Garantizamos la máxima calidad y frescura en cada sorbo.
+                <br><br>
+                Nuestra misión es proporcionar una hidratación excepcional para tu hogar u oficina. Comprometidos con la sostenibilidad, utilizamos envases eco-amigables. En Wilsons, creemos en la excelencia en cada gota. Mejora tu bienestar con nuestra agua de calidad superior. Confía en nosotros como tu fuente confiable de hidratación.
+                <br><br>
+                <strong>AGUA TESORO</strong> <br>
+                R.S DIGESA P0608322N/NAKRAU
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="images/banner-products/WI.webp" class="img-fluid" alt="Distribuidora Wilsons">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5">
+
+      <!-- Sección Frase Destacada -->
+      <section class="text-center py-4 custom-text-section">
+        <div class="container d-flex flex-column flex-md-row align-items-center">
+          <img src="images/PERFIL-W.jpg" alt="Marca Distribuidora Wilsons" height="50" class="mb-3 mb-md-0 me-md-3 logo-new">
+          <p class="mb-0 custom-text">
+            En DISTRIBUIDORA WILSONS, nos dedicamos a proporcionar agua purificada de la más alta calidad en bidones de 20 litros. Nuestra tecnología de ósmosis inversa, ozono y rayos UV garantiza la frescura y pureza en cada sorbo.
+          </p>
+        </div>
+      </section>
+
+      <hr class="my-5">
+
+      <!-- Sección Beneficios -->
+      <section id="beneficios" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4 text-center">Beneficios</h2>
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img src="images/banner-products/CH.png" class="img-fluid" alt="Beneficios del Agua Pura">
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Agua Pura" class="me-2">
+                  <span>Agua pura y segura.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Mejor Sabor" class="me-2">
+                  <span>Mejor sabor y olor.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Protección Bacteriológica" class="me-2">
+                  <span>Protección bacteriológica.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Hidratación Efectiva" class="me-2">
+                  <span>Hidratación efectiva.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Salud Gastrointestinal" class="me-2">
+                  <span>Salud gastrointestinal.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Sostenibilidad" class="me-2">
+                  <span>Sostenible.</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <img src="images/iconos/icons8-agua-48.png" alt="Conveniencia y Ahorro" class="me-2">
+                  <span>Conveniencia y ahorro.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5">
+
+      <!-- Sección Productos -->
+      <section id="productos" class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center">Productos</h2>
+
+          <!-- Productos Bidón Azul -->
+          <div class="mb-5">
+            <h3 class="mb-3">Agua Tesoro Bidón Azul</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- Producto 1 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-azul/bidon-1.png" class="card-img-top" alt="Bidón Azul + Agua de 20L">
                   <div class="card-body">
-                    <h5 class="card-title precio">2 Bidones + agua de 20L</h5>
-                    <h5 class="precio">S/59</h5>
+                    <h5 class="card-title">Agua Tesoso 20L</h5>
+                    <p class="card-text text-success">S/35</p>
                   </div>
-                  <div class="card-footer">
-                    <div class="btn-container-wasa">
-                      <a href="https://wa.link/dlpqak">
-                        <button class="btn-wasap">
-                        <img src="images/wasa-1.png" alt=""> Solicitar →</button>
-                      </a>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-
-      <!-- bidon pink -->
-      <div class="container" id="product">
-        <div class="cat-name d-flex justify-content-between">
-          <h1 class="fw-bolder text-bidonPink">Bidones Pink</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col card-bidonpink">
-            <div class="card h-90">
-              <div class="product-card">
-                <img src="images/bidon-pink/bidonPink-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title precio">Bidón pink + Agua de 20L</h5>
-                  <h5 class="precio">S/30</h5>
-                </div>
-                <div class="card-footer">
-                  <div class="btn-container-wasa">
-                    <a href="https://wa.link/4gadlc">
-                      <button class="btn-wasap">
-                      <img src="images/wasa-1.png" alt=""> Solicitar →</button>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/0j09kh" class="btn btn-success">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col card-bidonpink">
-            <div class="card h-90">
-              <div class="product-card">
-                <img src="images/bidon-pink/bidonPink-2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title precio">Solo Agua de 20L</h5>
-                  <h5 class="precio">S/14</h5>
-                </div>
-                <div class="card-footer">
-                  <div class="btn-container-wasa">
-                    <a href="https://wa.link/tqa6o2">
-                      <button class="btn-wasap">
-                      <img src="images/wasa-1.png" alt=""> Solicitar →</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col card-bidonpink">
-            <div class="card h-90">
-              <div class="product-card">
-                  <img src="images/bidon-pink/bidonPink-1.png" class="card-img-top" alt="...">
+              <!-- Producto 2 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-azul/bidon-1.png" class="card-img-top" alt="Solo Agua de 20L">
                   <div class="card-body">
-                    <h5 class="card-title precio">2 Bidones + Agua de 20L</h5>
-                    <h5 class="precio">S/59</h5>
+                    <h5 class="card-title">Recarga Agua Tesoro de 20L</h5>
+                    <p class="card-text text-success">S/16</p>
                   </div>
-                  <div class="card-footer">
-                    <div class="btn-container-wasa">
-                      <a href="https://wa.link/vyicsy">
-                        <button class="btn-wasap">
-                        <img src="images/wasa-1.png" alt=""> Solicitar →</button>
-                      </a>
-                    </div>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/1e5yi5" class="btn btn-success">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
+                    </a>
                   </div>
+                </div>
+              </div>
+              <!-- Producto 3 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-azul/bidon-2.png" class="card-img-top" alt="2 Bidones + Agua de 20L">
+                  <div class="card-body">
+                    <h5 class="card-title">2 Bidones de Agua Tesoso 40L</h5>
+                    <p class="card-text text-success">S/65</p>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/dlpqak" class="btn btn-success">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Productos Bidón Pink -->
+          <div>
+            <h3 class="mb-3">Agua Tesoro Bidón Rosado</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- Producto 1 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-pink/bidonPink-1.png" class="card-img-top" alt="Bidón Pink + Agua de 20L">
+                  <div class="card-body">
+                    <h5 class="card-title">Agua Tesoso 20L</h5>
+                    <p class="card-text text-success">S/35</p>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/4gadlc" class="btn btn-pink">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 2 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-pink/bidonPink-2.png" class="card-img-top" alt="Solo Agua de 20L">
+                  <div class="card-body">
+                    <h5 class="card-title">Recarga de Agua Tesoso 20L</h5>
+                    <p class="card-text text-success">S/16</p>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/tqa6o2" class="btn btn-pink">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 3 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/bidon-pink/bidonPink-1.png" class="card-img-top" alt="2 Bidones + Agua de 20L">
+                  <div class="card-body">
+                    <h5 class="card-title">2 Bidones de Agua Tesoso 40L</h5>
+                    <p class="card-text text-success">S/65</p>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <a href="https://wa.link/vyicsy" class="btn btn-pink">
+                      <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Solicitar →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Botón Fijo de WhatsApp -->
+        <a href="https://wa.link/oe81j8" class="btn btn-fixed">
+          <img src="images/wasa-1.png" alt="WhatsApp" class="me-2"> Consultar por WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="py-4">
+      <div class="container">
+        <p class="mb-1">© 2023 All rights reserved by Wilson | Lima, Perú</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Distribuidorawilson12" class="text-white me-3" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/distribuidora_wilson/" class="text-white me-3" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.link/oe81j8" class="text-white" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
       </div>
+    </footer>
 
-
-        <a href=""><button class="btn-wasa-fixed"><img src="images/wasa-1.png" alt="">Consultar por whatsapp</button></a>
-
-
-      <br>
-      <hr>
-
-      <!-- Footer  -->
-      <footer><h6>©copyright 2023 All rights reserved by Wilson | Lima, Perú </h6></footer>
-
-
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-
-    <script type="text/javascript" src="nav.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>
